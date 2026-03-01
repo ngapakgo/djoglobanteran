@@ -1,41 +1,74 @@
 import React, { useState } from 'react';
 import logo from './assets/djoglo_kotak.jpg';
-import heroImage from './assets/depan Djoglo Banteran.jpg'; // tambahkan gambar hero yang menarik
+import nuansa1 from './assets/nuansa/Susana Djoglo_8.jpg'
+import nuansa2 from './assets/nuansa/Susana Djoglo_12.jpg'
+import nuansa3 from './assets/nuansa/Susana Djoglo_15.jpg'
+import nuansa4 from './assets/nuansa/Susana Djoglo_17.jpg'
+import nuansa5 from './assets/nuansa/Susana Djoglo_19.jpg'
+import nuansa6 from './assets/nuansa/Susana Djoglo_22.jpg'
+import aviary1 from "./assets/hewan/Hewan_1.jpg"
+import aviary2 from "./assets/hewan/Hewan_2.jpg"
+import aviary3 from "./assets/hewan/Hewan_3.jpg"
+import aviary4 from "./assets/hewan/Hewan_4.jpg"
+import aviary5 from "./assets/hewan/Hewan_5.jpg"
+import aviary6 from "./assets/hewan/Hewan_6.jpg"
+import antik1 from "./assets/antik/Barang Antik_1.jpg"
+import antik2 from "./assets/antik/Barang Antik_3.jpg"
+import antik3 from "./assets/antik/Barang Antik_4.jpg"
+import antik4 from "./assets/antik/Barang Antik_5.jpg"
+import antik5 from "./assets/antik/Barang Antik_6.jpg"
+import antik6 from "./assets/antik/Barang Antik_7.jpg"
+import menu1 from "./assets/paket/Es Krim.jpg"
+import menu2 from "./assets/paket/Menu Makanan dan Minuman.jpg"
+import menu3 from "./assets/paket/Minuman, Jus, Kopi.jpg"
+import menu4 from "./assets/paket/Paket Wedding.jpg"
+import card4 from "./assets/cardnuansa/Card_4.jpg"
+import heroImage from './assets/heroimage/Depan_2.jpg'; // tambahkan gambar hero yang menarik
 import ayamBakar from './assets/ayam_bakar.jpg'; // gambar menu nasi timbel
 import menuGurame from './assets/gurameh_bakar.jpg'; // gambar gurame
 import menuAyamGeprek from './assets/ayam_geprek.jpg'; // gambar mendoan
 import esTeh from './assets/es_teh.jpg';
 import esJeruk from './assets/es_jeruk.jpg';
 import ingkungAyam from './assets/ingkung_ayam.jpg';
-import nuansaImage from './assets/logo.jpeg'; // gambar nuansa djoglo
-import kolamImage from './assets/logo.jpeg'; // gambar kolam ikan
-import galeriImage from './assets/logo.jpeg'; // gambar galeri antik
-
+import nuansaImage from './assets/cardnuansa/Card_1.jpg'; // gambar nuansa djoglo
+import kolamImage from './assets/cardnuansa/Card_2.jpg'; // gambar kolam ikan
+import galeriImage from './assets/cardnuansa/Card_3.jpg'; // gambar galeri antik
+import iconig from './assets/icon/instagram.png';
+import iconponsel from './assets/icon/ponsel.png';
+import icontiktok from './assets/icon/tiktok.png';
+import iconwa from './assets/icon/whatsapp.png';
 // Data untuk gallery foto
 const galleryData = {
   nuansa: [
-    { id: 1, image: logo, title: "Nuansa Djoglo 1", desc: "Suasana utama Djoglo" },
-    { id: 2, image: logo, title: "Nuansa Djoglo 2", desc: "Detail arsitektur kayu" },
-    { id: 3, image: logo, title: "Nuansa Djoglo 3", desc: "Area tempat duduk" },
-    { id: 4, image: logo, title: "Nuansa Djoglo 4", desc: "Pemandangan sawah" },
-    { id: 5, image: logo, title: "Nuansa Djoglo 5", desc: "Suasana malam" },
-    { id: 6, image: logo, title: "Nuansa Djoglo 6", desc: "Detail ornamen" },
+    { id: 1, image: nuansa6, title: "Nuansa Djoglo 1", desc: "Ornamen Gerbang Masuk" },
+    { id: 2, image: nuansa2, title: "Nuansa Djoglo 2", desc: "Suasana Aula" },
+    { id: 3, image: nuansa3, title: "Nuansa Djoglo 3", desc: "Suasana Aula & Kolam" },
+    { id: 4, image: nuansa4, title: "Nuansa Djoglo 4", desc: "Suasana Gazebo Belakang" },
+    { id: 5, image: nuansa5, title: "Nuansa Djoglo 5", desc: "Suasana Aula" },
+    { id: 6, image: nuansa1, title: "Nuansa Djoglo 6", desc: "Suasana Gazebo" },
+    
   ],
   kolam: [
-    { id: 1, image: logo, title: "Kolam Ikan 1", desc: "Kolam ikan koi" },
-    { id: 2, image: logo, title: "Kolam Ikan 2", desc: "Ikan hias warna-warni" },
-    { id: 3, image: logo, title: "Kolam Ikan 3", desc: "Suasana kolam" },
-    { id: 4, image: logo, title: "Kolam Ikan 4", desc: "Air mancur" },
-    { id: 5, image: logo, title: "Kolam Ikan 5", desc: "Taman sekitar kolam" },
-    { id: 6, image: logo, title: "Kolam Ikan 6", desc: "Jembatan kecil" },
+    { id: 1, image: aviary1, title: "Aviary Mini 1", desc: "Kolam ikan koi" },
+    { id: 2, image: aviary2, title: "Aviary Mini 2", desc: "Ayam Hias" },
+    { id: 3, image: aviary3, title: "Aviary Mini 3", desc: "Ayam Hias" },
+    { id: 4, image: aviary4, title: "Aviary Mini 4", desc: "Ayam Hias" },
+    { id: 5, image: aviary5, title: "Aviary Mini 5", desc: "Ayam Hias" },
+    { id: 6, image: aviary6, title: "Aviary Mini 6", desc: "Burung hias" },
   ],
   galeri: [
-    { id: 1, image: logo, title: "Galeri Antik 1", desc: "Koleksi vas kuno" },
-    { id: 2, image: logo, title: "Galeri Antik 2", desc: "Lukisan klasik" },
-    { id: 3, image: logo, title: "Galeri Antik 3", desc: "Perabotan antik" },
-    { id: 4, image: logo, title: "Galeri Antik 4", desc: "Koleksi piring kuno" },
-    { id: 5, image: logo, title: "Galeri Antik 5", desc: "Patung tradisional" },
-    { id: 6, image: logo, title: "Galeri Antik 6", desc: "Alat musik tradisional" },
+    { id: 1, image: antik1, title: "Galeri Antik 1", desc: "Dokar Antik" },
+    { id: 2, image: antik2, title: "Galeri Antik 2", desc: "Koleksi Cangkir Antik" },
+    { id: 3, image: antik3, title: "Galeri Antik 3", desc: "Koleksi Cangkir Antik" },
+    { id: 4, image: antik4, title: "Galeri Antik 4", desc: "Koleksi Cangkir Antik" },
+    { id: 5, image: antik5, title: "Galeri Antik 5", desc: "Perabotan Antik" },
+    { id: 6, image: antik6, title: "Galeri Antik 6", desc: "Meja Makan Antik" },
+  ],
+  daftarmenu: [
+    { id: 1, image: menu2, title: "Menu Makanan", desc: "Berbagai Macam Menu Masakan Nusantara" },
+    { id: 2, image: menu3, title: "Menu Minuman", desc: "Berbagai Macam Minuman Racikan Nusantara" },
+    { id: 3, image: menu4, title: "Paket Wedding", desc: "Pilihan Paket Wwdding" },
+    { id: 4, image: menu1, title: "Menu EsKrim", desc: "Aneka Rasa Eskrim" },
   ]
 };
 
@@ -228,19 +261,26 @@ const App = () => {
       padding: '80px 8%', 
       backgroundColor: '#EDDCC6',
       display: 'flex', 
-      justifyContent: 'center', 
-      flexWrap: 'wrap', 
+      flexDirection: 'row',
+      flexWrap: 'nowrap',
       gap: '30px',
       marginTop: '-50px',
       position: 'relative',
       zIndex: 10,
-      borderRadius: '50px 50px 0 0'
+      borderRadius: '50px 50px 0 0',
+      overflowX: 'auto',
+      overflowY: 'hidden',
+      scrollBehavior: 'smooth',
+      WebkitOverflowScrolling: 'touch',
+      scrollbarWidth: 'thin',
+      msOverflowStyle: 'auto',
     },
+
     highlightCard: { 
       backgroundColor: 'white', 
       padding: '0 0 35px 0', 
       borderRadius: '20px', 
-      width: '320px', 
+      width: '280px', // Sedikit diperkecil agar 4 card muat dalam satu row
       textAlign: 'center', 
       boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
       transition: 'all 0.3s ease',
@@ -248,18 +288,21 @@ const App = () => {
       position: 'relative',
       overflow: 'hidden'
     },
+
     highlightImage: {
       width: '100%',
-      height: '200px',
+      height: '180px', // Tinggi gambar sedikit dikurangi
       objectFit: 'cover',
       marginBottom: '20px',
       transition: 'transform 0.5s ease'
     },
+
     highlightIcon: {
       fontSize: '2rem',
       marginBottom: '10px',
       color: '#BF4646'
     },
+
     viewGalleryBtn: {
       display: 'inline-block',
       marginTop: '15px',
@@ -267,12 +310,13 @@ const App = () => {
       backgroundColor: '#7EACB5',
       color: 'white',
       borderRadius: '25px',
-      fontSize: '0.9rem',
+      fontSize: '0.85rem', // Font sedikit diperkecil
       fontWeight: '600',
       transition: 'all 0.3s ease',
       border: 'none',
       cursor: 'pointer'
     },
+
     sectionTitle: { 
       textAlign: 'center', 
       color: '#BF4646', 
@@ -395,30 +439,46 @@ const App = () => {
       boxShadow: '0 30px 60px rgba(0,0,0,0.2)'
     },
     contactInfo: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '15px',
-      marginTop: '20px'
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '20px'
     },
     contactItem: {
       display: 'flex',
       alignItems: 'center',
-      gap: '15px',
-      padding: '15px',
+      gap: '20px',
+      padding: '20px 30px',
       backgroundColor: 'white',
-      borderRadius: '12px',
+      borderRadius: '15px',
       cursor: 'pointer',
       transition: 'all 0.3s ease',
-      border: '2px solid transparent'
+      border: '2px solid transparent',
+      boxShadow: '0 5px 15px rgba(0, 0, 0, 0.05)'
     },
     contactIcon: {
-      fontSize: '1.8rem',
-      color: '#BF4646'
+      width: '50px',
+      height: '50px',
+      borderRadius: '50%',
+      backgroundColor: '#FFF4EA',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontSize: '1.5rem'
     },
     contactText: {
-      fontSize: '1rem',
-      color: '#2C3E50',
-      fontWeight: '500'
+      fontSize: '1.1rem',
+      color: '#333'
+    },
+    // Style untuk gambar jika ingin menggunakan gambar dari import
+    contactImage: {
+      width: '30px',
+      height: '30px',
+      objectFit: 'contain'
+    },
+    contactImageTik: {
+      width: '60px',
+      height: '60px',
+      objectFit: 'contain'
     },
     footer: { 
       background: 'linear-gradient(135deg, #7EACB5, #5f8a94)',
@@ -450,6 +510,21 @@ const App = () => {
       transition: 'all 0.3s ease',
       textDecoration: 'none',
       color: 'white'
+    },
+    socialIconImage: {
+      width: '30px',
+      height: '30px',
+      
+    },
+    socialIconImageTik: {
+      width: '60px',
+      height: '60px',
+      objectFit: 'contain'
+    },
+    waFloatImage: {
+      width: '35px',
+      height: '35px',
+
     },
     waFloat: {
       position: 'fixed',
@@ -617,6 +692,9 @@ const App = () => {
       case 'galeri':
         images = galleryData.galeri;
         break;
+      case 'daftarmenu':
+        images = galleryData.daftarmenu;
+      break;
       default:
         images = [];
     }
@@ -773,10 +851,12 @@ const App = () => {
           }}
         >
           <img src={nuansaImage} alt="Nuansa Djoglo" style={styles.highlightImage} />
-          <div style={{ padding: '0 20px 20px 20px' }}>
+          <div style={{ padding: '0 15px 20px 15px' }}>
             <div style={styles.highlightIcon}>🏠</div>
-            <h4 style={{ color: '#7EACB5', margin: '0 0 10px 0', fontSize: '1.3rem' }}>Nuansa Djoglo</h4>
-            <p style={{ fontSize: '1rem', margin: 0, color: '#666' }}>Arsitektur kayu klasik yang nyaman dan sejuk dengan sentuhan modern khas Jawa</p>
+            <h4 style={styles.cardTitle}>Nuansa Djoglo</h4>
+            <p style={styles.cardDescription}>
+              Arsitektur kayu klasik yang nyaman dan sejuk dengan sentuhan modern khas Jawa
+            </p>
             <button 
               style={styles.viewGalleryBtn}
               onMouseEnter={(e) => {
@@ -809,10 +889,12 @@ const App = () => {
           }}
         >
           <img src={kolamImage} alt="Kolam Ikan" style={styles.highlightImage} />
-          <div style={{ padding: '0 20px 20px 20px' }}>
+          <div style={{ padding: '0 15px 20px 15px' }}>
             <div style={styles.highlightIcon}>🐟</div>
-            <h4 style={{ color: '#7EACB5', margin: '0 0 10px 0', fontSize: '1.3rem' }}>Kolam Ikan</h4>
-            <p style={{ fontSize: '1rem', margin: 0, color: '#666' }}>Kolam ikan dengan berbagai jenis ikan hias yang menambah keindahan dan ketenangan</p>
+            <h4 style={styles.cardTitle}>Aviary Mini</h4>
+            <p style={styles.cardDescription}>
+              Aviary dengan berbagai jenis hewan yang menambah keindahan dan ketenangan
+            </p>
             <button 
               style={styles.viewGalleryBtn}
               onMouseEnter={(e) => {
@@ -823,7 +905,7 @@ const App = () => {
                 e.target.style.backgroundColor = '#7EACB5';
                 e.target.style.transform = 'scale(1)';
               }}
-              onClick={() => openGallery('kolam', 'Kolam Ikan')}
+              onClick={() => openGallery('kolam', 'Aviary Mini')}
             >
               📸 Lihat Galeri Foto
             </button>
@@ -845,10 +927,12 @@ const App = () => {
           }}
         >
           <img src={galeriImage} alt="Galeri Antik" style={styles.highlightImage} />
-          <div style={{ padding: '0 20px 20px 20px' }}>
+          <div style={{ padding: '0 15px 20px 15px' }}>
             <div style={styles.highlightIcon}>🖼️</div>
-            <h4 style={{ color: '#7EACB5', margin: '0 0 10px 0', fontSize: '1.3rem' }}>Galeri Antik</h4>
-            <p style={{ fontSize: '1rem', margin: 0, color: '#666' }}>Koleksi barang seni dan antik bernilai sejarah tinggi dari berbagai masa</p>
+            <h4 style={styles.cardTitle}>Galeri Antik</h4>
+            <p style={styles.cardDescription}>
+              Koleksi barang seni dan antik bernilai sejarah tinggi dari berbagai masa
+            </p>
             <button 
               style={styles.viewGalleryBtn}
               onMouseEnter={(e) => {
@@ -860,6 +944,44 @@ const App = () => {
                 e.target.style.transform = 'scale(1)';
               }}
               onClick={() => openGallery('galeri', 'Galeri Antik')}
+            >
+              📸 Lihat Galeri Foto
+            </button>
+          </div>
+        </div>
+
+        {/* Menu Paket*/}
+        <div 
+          style={styles.highlightCard}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-15px)';
+            e.currentTarget.style.boxShadow = '0 30px 50px rgba(0,0,0,0.2)';
+            e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
+            e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+          }}
+        >
+          <img src={card4} alt="Daftar Menu" style={styles.highlightImage} />
+          <div style={{ padding: '0 15px 20px 15px' }}>
+            <div style={styles.highlightIcon}>🍽️</div>
+            <h4 style={styles.cardTitle}>Daftar Menu</h4>
+            <p style={styles.cardDescription}>
+              Pilihan Daftar Menu dan Paket
+            </p>
+            <button 
+              style={styles.viewGalleryBtn}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = '#BF4646';
+                e.target.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = '#7EACB5';
+                e.target.style.transform = 'scale(1)';
+              }}
+              onClick={() => openGallery('daftarmenu', 'Daftar Menu')}
             >
               📸 Lihat Galeri Foto
             </button>
@@ -948,79 +1070,109 @@ const App = () => {
 
       {/* CONTACT SECTION */}
       <section id="kontak" style={{ padding: '80px 8%', backgroundColor: '#FFF4EA' }}>
-        <h2 style={styles.sectionTitle}>Hubungi Kami</h2>
-        <div style={styles.underline}></div>
-        
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <div style={styles.contactInfo}>
-            {/* WhatsApp Contact */}
-            <div 
-              style={styles.contactItem}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateX(10px)';
-                e.currentTarget.style.border = '2px solid #25D366';
-                e.currentTarget.style.boxShadow = '0 10px 25px rgba(37, 211, 102, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateX(0)';
-                e.currentTarget.style.border = '2px solid transparent';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-              onClick={() => openWhatsApp()}
-            >
-              <div style={styles.contactIcon}>📱</div>
-              <div>
-                <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>WhatsApp</div>
-                <div style={styles.contactText}>+62 851-6993-4088</div>
-              </div>
+      <h2 style={styles.sectionTitle}>Hubungi Kami</h2>
+      <div style={styles.underline}></div>
+      
+      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <div style={styles.contactInfo}>
+          {/* WhatsApp Contact - Menggunakan icon dari import */}
+          <div 
+            style={styles.contactItem}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateX(10px)';
+              e.currentTarget.style.border = '2px solid #25D366';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(37, 211, 102, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateX(0)';
+              e.currentTarget.style.border = '2px solid transparent';
+              e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+            }}
+            onClick={openWhatsApp}
+          >
+            <div style={styles.contactIcon}>
+              <img src={iconwa} alt="WhatsApp" style={styles.contactImage} />
             </div>
-
-            {/* Instagram Contact */}
-            <div 
-              style={styles.contactItem}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateX(10px)';
-                e.currentTarget.style.border = '2px solid #E4405F';
-                e.currentTarget.style.boxShadow = '0 10px 25px rgba(228, 64, 95, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateX(0)';
-                e.currentTarget.style.border = '2px solid transparent';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-              onClick={openInstagram}
-            >
-              <div style={styles.contactIcon}>📷</div>
-              <div>
-                <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>Instagram</div>
-                <div style={styles.contactText}>@djoglobanteran_</div>
-              </div>
+            <div>
+              <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>WhatsApp</div>
+              <div style={styles.contactText}>+62 851-6993-4088</div>
             </div>
+          </div>
 
-            {/* TikTok Contact */}
-            <div 
-              style={styles.contactItem}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateX(10px)';
-                e.currentTarget.style.border = '2px solid #000000';
-                e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateX(0)';
-                e.currentTarget.style.border = '2px solid transparent';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-              onClick={openTikTok}
-            >
-              <div style={styles.contactIcon}>🎵</div>
-              <div>
-                <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>TikTok</div>
-                <div style={styles.contactText}>@newdjoglo_banteran</div>
-              </div>
+          {/* Instagram Contact - Menggunakan icon dari import */}
+          <div 
+            style={styles.contactItem}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateX(10px)';
+              e.currentTarget.style.border = '2px solid #E4405F';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(228, 64, 95, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateX(0)';
+              e.currentTarget.style.border = '2px solid transparent';
+              e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+            }}
+            onClick={openInstagram}
+          >
+            <div style={styles.contactIcon}>
+              <img src={iconig} alt="Instagram" style={styles.contactImage} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>Instagram</div>
+              <div style={styles.contactText}>@djoglobanteran_</div>
+            </div>
+          </div>
+
+          {/* TikTok Contact - Menggunakan icon dari import */}
+          <div 
+            style={styles.contactItem}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateX(10px)';
+              e.currentTarget.style.border = '2px solid #000000';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateX(0)';
+              e.currentTarget.style.border = '2px solid transparent';
+              e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+            }}
+            onClick={openTikTok}
+          >
+            <div style={styles.contactIcon}>
+              <img src={icontiktok} alt="TikTok" style={styles.contactImageTik} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>TikTok</div>
+              <div style={styles.contactText}>@newdjoglo_banteran</div>
+            </div>
+          </div>
+
+          {/* Ponsel Contact - Jika ingin menambahkan kontak telepon */}
+          <div 
+            style={styles.contactItem}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateX(10px)';
+              e.currentTarget.style.border = '2px solid #4A6D7C';
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(74, 109, 124, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateX(0)';
+              e.currentTarget.style.border = '2px solid transparent';
+              e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+            }}
+            onClick={() => window.location.href = 'tel:+6285169934088'}
+          >
+            <div style={styles.contactIcon}>
+              <img src={iconponsel} alt="Telepon" style={styles.contactImage} />
+            </div>
+            <div>
+              <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>Telepon</div>
+              <div style={styles.contactText}>0851-6993-4088</div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* FOOTER */}
       <footer style={styles.footer}>
@@ -1035,10 +1187,10 @@ const App = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={styles.socialIcon}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#25D366'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.2)'}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#25D366'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
             >
-              📱
+              <img src={iconwa} alt="WhatsApp" style={styles.socialIconImage} />
             </a>
             
             {/* Instagram Icon */}
@@ -1047,10 +1199,10 @@ const App = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={styles.socialIcon}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#E4405F'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.2)'}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E4405F'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
             >
-              📷
+              <img src={iconig} alt="Instagram" style={styles.socialIconImage} />
             </a>
 
             {/* TikTok Icon */}
@@ -1059,17 +1211,14 @@ const App = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={styles.socialIcon}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#000000'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(255,255,255,0.2)'}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)'}
             >
-              🎵
+              <img src={icontiktok} alt="TikTok" style={styles.socialIconImageTik} />
             </a>
           </div>
 
           <div style={{ marginTop: '30px', fontSize: '0.9rem', borderTop: '1px solid rgba(255,255,255,0.2)', paddingTop: '30px' }}>
-            <p>📞 +62 851-6993-4088</p>
-            <p>📧 djoglobanteran@gmail.com</p>
-            <p>🎵 TikTok: @newdjoglo_banteran</p>
             <p>© 2024 Rumah Makan Djoglo Banteran. All rights reserved.</p>
           </div>
         </div>
@@ -1082,15 +1231,15 @@ const App = () => {
         rel="noopener noreferrer"
         style={styles.waFloat}
         onMouseEnter={(e) => {
-          e.target.style.transform = 'scale(1.1)';
-          e.target.style.boxShadow = '0 15px 35px rgba(37, 211, 102, 0.6)';
+          e.currentTarget.style.transform = 'scale(1.1)';
+          e.currentTarget.style.boxShadow = '0 15px 35px rgba(37, 211, 102, 0.6)';
         }}
         onMouseLeave={(e) => {
-          e.target.style.transform = 'scale(1)';
-          e.target.style.boxShadow = '0 10px 25px rgba(37, 211, 102, 0.4)';
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 10px 25px rgba(37, 211, 102, 0.4)';
         }}
       >
-        📱
+        <img src={iconwa} alt="WhatsApp" style={styles.waFloatImage} />
       </a>
 
       {/* MODAL GALLERY */}
