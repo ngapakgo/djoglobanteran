@@ -42,21 +42,16 @@ import keluarga2 from './assets/keluarga/kl2.jpg'
 import keluarga3 from './assets/keluarga/kl3.jpg'
 import keluarga4 from './assets/keluarga/kl4.jpg'
 import keluarga5 from './assets/keluarga/kl5.jpg'
-import keluarga6 from './assets/keluarga/kl6.jpg'
-import yr1 from './assets/yearbook/yearbook1.jpg'
 import yr2 from './assets/yearbook/yearbook2.jpg'
 import yr3 from './assets/yearbook/yearbook3.jpg'
 import yr4 from './assets/yearbook/yearbook4.jpg'
-import yr5 from './assets/yearbook/yearbook5.jpg'
-import yr6 from './assets/yearbook/yearbook6.jpg'
 import yr7 from './assets/yearbook/yearbook7.jpg'
 import yr8 from './assets/yearbook/yearbook8.jpg'
 import wd1 from './assets/wedding/Wedding_1.jpg'
 import wd2 from './assets/wedding/Wedding_2.jpg'
 import wd3 from './assets/wedding/Wedding_3.jpg'
-import wd4 from './assets/wedding/Wedding_4.jpg'
 import wd5 from './assets/wedding/Wedding_5.jpg'
-import wd6 from './assets/wedding/Wedding_6.jpg'
+
 
 // Import untuk section acara (sementara pakai logo dulu)
 import acaraKeluarga from './assets/cardacara/carkel.jpg';
