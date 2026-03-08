@@ -55,7 +55,6 @@ import wd5 from './assets/wedding/Wedding_5.jpg'
 
 // Import untuk section acara (sementara pakai logo dulu)
 import acaraKeluarga from './assets/cardacara/carkel.jpg';
-import acaraDawis from './assets/djoglo_kotak.jpg';
 import acaraYearBook from './assets/cardacara/cardyear.jpg';
 import acaraWedding from './assets/cardacara/cardwed.jpg';
 
@@ -182,7 +181,6 @@ const App = () => {
   const [modalImages, setModalImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeAcara, setActiveAcara] = useState(null);
 
   // Data sosial media dan kontak
   const socialData = {
