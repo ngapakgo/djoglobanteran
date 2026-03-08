@@ -23,20 +23,47 @@ import menu2 from "./assets/paket/Menu Makanan dan Minuman.jpg"
 import menu3 from "./assets/paket/Minuman, Jus, Kopi.jpg"
 import menu4 from "./assets/paket/Paket Wedding.jpg"
 import card4 from "./assets/cardnuansa/Card_4.jpg"
-import heroImage from './assets/heroimage/Depan_2.jpg'; // tambahkan gambar hero yang menarik
-import ayamBakar from './assets/ayam_bakar.jpg'; // gambar menu nasi timbel
-import menuGurame from './assets/gurameh_bakar.jpg'; // gambar gurame
-import menuAyamGeprek from './assets/ayam_geprek.jpg'; // gambar mendoan
+import heroImage from './assets/heroimage/Depan_2.jpg';
+import ayamBakar from './assets/ayam_bakar.jpg';
+import menuGurame from './assets/gurameh_bakar.jpg';
+import menuAyamGeprek from './assets/ayam_geprek.jpg';
 import esTeh from './assets/es_teh.jpg';
 import esJeruk from './assets/es_jeruk.jpg';
 import ingkungAyam from './assets/ingkung_ayam.jpg';
-import nuansaImage from './assets/cardnuansa/Card_1.jpg'; // gambar nuansa djoglo
-import kolamImage from './assets/cardnuansa/Card_2.jpg'; // gambar kolam ikan
-import galeriImage from './assets/cardnuansa/Card_3.jpg'; // gambar galeri antik
+import nuansaImage from './assets/cardnuansa/Card_1.jpg';
+import kolamImage from './assets/cardnuansa/Card_2.jpg';
+import galeriImage from './assets/cardnuansa/Card_3.jpg';
 import iconig from './assets/icon/instagram.png';
 import iconponsel from './assets/icon/ponsel.png';
 import icontiktok from './assets/icon/tiktok.png';
 import iconwa from './assets/icon/whatsapp.png';
+import keluarga1 from './assets/keluarga/kl1.jpg'
+import keluarga2 from './assets/keluarga/kl2.jpg'
+import keluarga3 from './assets/keluarga/kl3.jpg'
+import keluarga4 from './assets/keluarga/kl4.jpg'
+import keluarga5 from './assets/keluarga/kl5.jpg'
+import keluarga6 from './assets/keluarga/kl6.jpg'
+import yr1 from './assets/yearbook/yearbook1.jpg'
+import yr2 from './assets/yearbook/yearbook2.jpg'
+import yr3 from './assets/yearbook/yearbook3.jpg'
+import yr4 from './assets/yearbook/yearbook4.jpg'
+import yr5 from './assets/yearbook/yearbook5.jpg'
+import yr6 from './assets/yearbook/yearbook6.jpg'
+import yr7 from './assets/yearbook/yearbook7.jpg'
+import yr8 from './assets/yearbook/yearbook8.jpg'
+import wd1 from './assets/wedding/Wedding_1.jpg'
+import wd2 from './assets/wedding/Wedding_2.jpg'
+import wd3 from './assets/wedding/Wedding_3.jpg'
+import wd4 from './assets/wedding/Wedding_4.jpg'
+import wd5 from './assets/wedding/Wedding_5.jpg'
+import wd6 from './assets/wedding/Wedding_6.jpg'
+
+// Import untuk section acara (sementara pakai logo dulu)
+import acaraKeluarga from './assets/cardacara/carkel.jpg';
+import acaraDawis from './assets/djoglo_kotak.jpg';
+import acaraYearBook from './assets/cardacara/cardyear.jpg';
+import acaraWedding from './assets/cardacara/cardwed.jpg';
+
 // Data untuk gallery foto
 const galleryData = {
   nuansa: [
@@ -46,7 +73,6 @@ const galleryData = {
     { id: 4, image: nuansa4, title: "Nuansa Djoglo 4", desc: "Suasana Gazebo Belakang" },
     { id: 5, image: nuansa5, title: "Nuansa Djoglo 5", desc: "Suasana Aula" },
     { id: 6, image: nuansa1, title: "Nuansa Djoglo 6", desc: "Suasana Gazebo" },
-    
   ],
   kolam: [
     { id: 1, image: aviary1, title: "Aviary Mini 1", desc: "Kolam ikan koi" },
@@ -67,10 +93,92 @@ const galleryData = {
   daftarmenu: [
     { id: 1, image: menu2, title: "Menu Makanan", desc: "Berbagai Macam Menu Masakan Nusantara" },
     { id: 2, image: menu3, title: "Menu Minuman", desc: "Berbagai Macam Minuman Racikan Nusantara" },
-    { id: 3, image: menu4, title: "Paket Wedding", desc: "Pilihan Paket Wwdding" },
+    { id: 3, image: menu4, title: "Paket Wedding", desc: "Pilihan Paket Wedding" },
     { id: 4, image: menu1, title: "Menu EsKrim", desc: "Aneka Rasa Eskrim" },
+  ],
+  // Data untuk galeri acara (sementara pakai logo)
+  acara: [
+    {
+      id: 1,
+      title: "Arisan Keluarga",
+      images: [
+        { id: 101, image: keluarga1, title: "Arisan Keluarga 1", desc: "Suasana arisan keluarga di Djoglo" },
+        { id: 102, image: keluarga2, title: "Arisan Keluarga 2", desc: "Momen kebersamaan keluarga" },
+        { id: 103, image: keluarga3, title: "Arisan Keluarga 3", desc: "Hidangan spesial untuk arisan" },
+        { id: 104, image: keluarga4, title: "Arisan Keluarga 4", desc: "Dekorasi ruang arisan" },
+        { id: 105, image: keluarga5, title: "Arisan Keluarga 5", desc: "Suasana hangat bersama keluarga" },
+      ]
+    },
+    // {
+    //   id: 2,
+    //   title: "Dawis",
+    //   images: [
+    //     { id: 201, image: logo, title: "Dawis 1", desc: "Pertemuan Dasawisma" },
+    //     { id: 202, image: logo, title: "Dawis 2", desc: "Suasana diskusi kelompok" },
+    //     { id: 203, image: logo, title: "Dawis 3", desc: "Kegiatan Dawis di Djoglo" },
+    //     { id: 204, image: logo, title: "Dawis 4", desc: "Fasilitas ruang pertemuan" },
+    //     { id: 205, image: logo, title: "Dawis 5", desc: "Momen kebersamaan Dawis" },
+    //   ]
+    // },
+    {
+      id: 2,
+      title: "Year Book",
+      images: [
+        { id: 301, image: yr7, title: "Year Book 1", desc: "Sesi foto year book" },
+        { id: 302, image: yr2, title: "Year Book 2", desc: "Spot foto klasik" },
+        { id: 303, image: yr3, title: "Year Book 3", desc: "Pose bersama di Djoglo" },
+        { id: 304, image: yr4, title: "Year Book 4", desc: "Background arsitektur Jawa" },
+        { id: 305, image: yr8, title: "Year Book 5", desc: "Momen abadi year book" },
+      ]
+    },
+    {
+      id: 3,
+      title: "Wedding",
+      images: [
+        { id: 401, image: wd1, title: "Wedding 1", desc: "Dekorasi pernikahan" },
+        { id: 402, image: wd2, title: "Wedding 2", desc: "Suasana resepsi" },
+        { id: 403, image: wd3, title: "Wedding 3", desc: "Pelaminan tradisional" },
+        { id: 405, image: wd5, title: "Wedding 5", desc: "Foto prewedding di Djoglo" },
+      ]
+    }
   ]
 };
+
+// Data untuk section acara
+const acaraData = [
+  {
+    id: 1,
+    title: "Arisan Keluarga",
+    desc: "Momen berkumpul keluarga semakin hangat dengan suasana djoglo yang nyaman dan menu spesial kami",
+    icon: "👨‍👩‍👧‍👦",
+    image: acaraKeluarga,
+    color: "#7EACB5"
+  },
+  // {
+  //   id: 2,
+  //   title: "Dawis",
+  //   desc: "Tempat ideal untuk pertemuan Dasawisma dengan suasana asri dan fasilitas lengkap",
+  //   icon: "🏘️",
+  //   image: acaraDawis,
+  //   color: "#BF4646"
+  // },
+  {
+    id: 2,
+    title: "Year Book",
+    desc: "Abadikan momen spesial tahunan Anda dengan latar arsitektur klasik yang instagramable",
+    icon: "📸",
+    image: acaraYearBook,
+    color: "#EDDCC6"
+  },
+  {
+    id: 3,
+    title: "Wedding",
+    desc: "Raih kesan istimewa di hari bahagia dengan konsep pernikahan tradisional yang elegan",
+    icon: "💒",
+    image: acaraWedding,
+    color: "#7EACB5"
+  }
+];
 
 const App = () => {
   // State untuk modal
@@ -78,14 +186,14 @@ const App = () => {
   const [modalTitle, setModalTitle] = useState('');
   const [modalImages, setModalImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeAcara, setActiveAcara] = useState(null);
 
-  // Palet Warna: #7EACB5, #FFF4EA, #EDDCC6, #BF4646
-  
   // Data sosial media dan kontak
   const socialData = {
     instagram: "https://www.instagram.com/djoglobanteran_?igsh=NGtpZmlrYzZjaWNo",
     tiktok: "https://www.tiktok.com/@newdjoglo_banteran?_r=1&_t=ZS-9455kfjxwQ6",
-    whatsapp: "6285169934088", // Format internasional tanpa +
+    whatsapp: "6285169934088",
     whatsappText: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20menu..."
   };
 
@@ -196,6 +304,28 @@ const App = () => {
       borderBottom: '2px solid transparent',
       transition: 'all 0.3s ease'
     },
+    mobileMenuButton: {
+      display: 'none',
+      fontSize: '2rem',
+      cursor: 'pointer',
+      color: '#BF4646'
+    },
+    mobileMenu: {
+      display: 'none',
+      position: 'absolute',
+      top: '90px',
+      left: 0,
+      right: 0,
+      backgroundColor: 'rgba(255, 244, 234, 0.98)',
+      backdropFilter: 'blur(10px)',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '30px 0',
+      gap: '25px',
+      borderBottom: '2px solid #EDDCC6',
+      zIndex: 999,
+      boxShadow: '0 10px 20px rgba(0,0,0,0.1)'
+    },
     hero: { 
       height: '90vh', 
       position: 'relative', 
@@ -262,25 +392,22 @@ const App = () => {
       backgroundColor: '#EDDCC6',
       display: 'flex', 
       flexDirection: 'row',
-      flexWrap: 'nowrap',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
       gap: '30px',
       marginTop: '-50px',
       position: 'relative',
       zIndex: 10,
-      borderRadius: '50px 50px 0 0',
-      overflowX: 'auto',
-      overflowY: 'hidden',
-      scrollBehavior: 'smooth',
-      WebkitOverflowScrolling: 'touch',
-      scrollbarWidth: 'thin',
-      msOverflowStyle: 'auto',
+      borderRadius: '50px 50px 0 0'
     },
 
     highlightCard: { 
       backgroundColor: 'white', 
       padding: '0 0 35px 0', 
       borderRadius: '20px', 
-      width: '280px', // Sedikit diperkecil agar 4 card muat dalam satu row
+      width: 'calc(25% - 23px)',
+      minWidth: '280px',
+      flex: '1 1 auto',
       textAlign: 'center', 
       boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
       transition: 'all 0.3s ease',
@@ -291,7 +418,7 @@ const App = () => {
 
     highlightImage: {
       width: '100%',
-      height: '180px', // Tinggi gambar sedikit dikurangi
+      height: '200px',
       objectFit: 'cover',
       marginBottom: '20px',
       transition: 'transform 0.5s ease'
@@ -310,7 +437,7 @@ const App = () => {
       backgroundColor: '#7EACB5',
       color: 'white',
       borderRadius: '25px',
-      fontSize: '0.85rem', // Font sedikit diperkecil
+      fontSize: '0.9rem',
       fontWeight: '600',
       transition: 'all 0.3s ease',
       border: 'none',
@@ -412,6 +539,179 @@ const App = () => {
       justifyContent: 'center',
       gap: '10px'
     },
+    // Acara Section Styles
+    acaraSection: {
+      padding: '40px 8% 80px 8%',
+      backgroundColor: '#FFF4EA',
+      position: 'relative'
+    },
+    acaraSubtitle: {
+      textAlign: 'center',
+      color: '#7EACB5',
+      fontSize: '1.2rem',
+      marginBottom: '40px',
+      fontStyle: 'italic'
+    },
+    acaraGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+      gap: '30px',
+      maxWidth: '1200px',
+      margin: '0 auto'
+    },
+    acaraCard: {
+      backgroundColor: 'white',
+      borderRadius: '30px',
+      overflow: 'hidden',
+      boxShadow: '0 15px 30px rgba(0,0,0,0.1)',
+      transition: 'all 0.4s ease',
+      position: 'relative',
+      cursor: 'pointer'
+    },
+    acaraImageContainer: {
+      position: 'relative',
+      height: '250px',
+      overflow: 'hidden'
+    },
+    acaraImage: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      transition: 'transform 0.6s ease'
+    },
+    acaraOverlay: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)',
+      display: 'flex',
+      alignItems: 'flex-end',
+      padding: '25px',
+      color: 'white'
+    },
+    acaraIcon: {
+      fontSize: '2.5rem',
+      marginRight: '15px',
+      backgroundColor: 'rgba(255,255,255,0.2)',
+      width: '60px',
+      height: '60px',
+      borderRadius: '50%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backdropFilter: 'blur(5px)'
+    },
+    acaraTitle: {
+      fontSize: '1.5rem',
+      fontWeight: '700',
+      margin: 0,
+      textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+    },
+    acaraContent: {
+      padding: '25px',
+      background: 'white'
+    },
+    acaraDescription: {
+      color: '#666',
+      fontSize: '0.95rem',
+      lineHeight: '1.6',
+      margin: '0 0 20px 0'
+    },
+    acaraButton: {
+      backgroundColor: '#7EACB5',
+      color: 'white',
+      border: 'none',
+      padding: '12px 25px',
+      borderRadius: '25px',
+      fontWeight: '600',
+      fontSize: '0.9rem',
+      cursor: 'pointer',
+      transition: 'all 0.3s ease',
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '10px',
+      width: '100%',
+      justifyContent: 'center'
+    },
+    acaraViewGalleryBtn: {
+      backgroundColor: '#BF4646',
+      color: 'white',
+      border: 'none',
+      padding: '12px 25px',
+      borderRadius: '25px',
+      fontWeight: '600',
+      fontSize: '0.9rem',
+      cursor: 'pointer',
+      transition: 'all 0.3s ease',
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '10px',
+      width: '100%',
+      justifyContent: 'center',
+      marginTop: '10px'
+    },
+    acaraStats: {
+      display: 'flex',
+      gap: '20px',
+      marginTop: '15px',
+      paddingTop: '15px',
+      borderTop: '1px solid #EDDCC6'
+    },
+    acaraStat: {
+      flex: 1,
+      textAlign: 'center'
+    },
+    acaraStatValue: {
+      fontSize: '1.2rem',
+      fontWeight: '700',
+      color: '#BF4646'
+    },
+    acaraStatLabel: {
+      fontSize: '0.8rem',
+      color: '#7EACB5',
+      marginTop: '5px'
+    },
+    acaraBanner: {
+      background: 'linear-gradient(135deg, #7EACB5 0%, #BF4646 100%)',
+      padding: '40px',
+      borderRadius: '20px',
+      marginTop: '50px',
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: '30px'
+    },
+    acaraBannerText: {
+      color: 'white',
+      flex: 1,
+      minWidth: '250px'
+    },
+    acaraBannerTitle: {
+      fontSize: '2rem',
+      fontWeight: '700',
+      margin: '0 0 10px 0'
+    },
+    acaraBannerDesc: {
+      fontSize: '1rem',
+      opacity: 0.9,
+      margin: 0
+    },
+    acaraBannerButton: {
+      backgroundColor: 'white',
+      color: '#BF4646',
+      padding: '15px 35px',
+      borderRadius: '50px',
+      border: 'none',
+      fontWeight: '700',
+      fontSize: '1rem',
+      cursor: 'pointer',
+      transition: 'all 0.3s ease',
+      whiteSpace: 'nowrap'
+    },
+    // Map Styles
     mapContainer: { 
       padding: '80px 8%', 
       backgroundColor: '#EDDCC6',
@@ -439,9 +739,9 @@ const App = () => {
       boxShadow: '0 30px 60px rgba(0,0,0,0.2)'
     },
     contactInfo: {
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '20px'
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '20px'
     },
     contactItem: {
       display: 'flex',
@@ -469,7 +769,6 @@ const App = () => {
       fontSize: '1.1rem',
       color: '#333'
     },
-    // Style untuk gambar jika ingin menggunakan gambar dari import
     contactImage: {
       width: '30px',
       height: '30px',
@@ -514,7 +813,6 @@ const App = () => {
     socialIconImage: {
       width: '30px',
       height: '30px',
-      
     },
     socialIconImageTik: {
       width: '60px',
@@ -524,7 +822,6 @@ const App = () => {
     waFloatImage: {
       width: '35px',
       height: '35px',
-
     },
     waFloat: {
       position: 'fixed',
@@ -694,7 +991,10 @@ const App = () => {
         break;
       case 'daftarmenu':
         images = galleryData.daftarmenu;
-      break;
+        break;
+      case 'acara':
+        images = galleryData.acara.find(a => a.title === title)?.images || [];
+        break;
       default:
         images = [];
     }
@@ -763,6 +1063,11 @@ const App = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -780,7 +1085,7 @@ const App = () => {
           />
           <span style={styles.navTitle}>DJOGLO BANTERAN</span>
         </div>
-        <div style={styles.navMenu}>
+        <div style={styles.navMenu} className="desktop-menu">
           <span 
             style={styles.navItem}
             onMouseEnter={(e) => handleNavHover(e, true)}
@@ -801,6 +1106,14 @@ const App = () => {
             style={styles.navItem}
             onMouseEnter={(e) => handleNavHover(e, true)}
             onMouseLeave={(e) => handleNavHover(e, false)}
+            onClick={() => scrollToSection('acara')}
+          >
+            ACARA
+          </span>
+          <span 
+            style={styles.navItem}
+            onMouseEnter={(e) => handleNavHover(e, true)}
+            onMouseLeave={(e) => handleNavHover(e, false)}
             onClick={() => scrollToSection('lokasi')}
           >
             LOKASI
@@ -814,7 +1127,44 @@ const App = () => {
             KONTAK
           </span>
         </div>
+        <div style={styles.mobileMenuButton} className="mobile-menu-button" onClick={toggleMenu}>
+          ☰
+        </div>
       </nav>
+
+      {/* Mobile Menu */}
+      <div style={{...styles.mobileMenu, display: isMenuOpen ? 'flex' : 'none'}} className="mobile-menu">
+        <span 
+          style={styles.navItem}
+          onClick={() => scrollToSection('home')}
+        >
+          HOME
+        </span>
+        <span 
+          style={styles.navItem}
+          onClick={() => scrollToSection('menu')}
+        >
+          MENU
+        </span>
+        <span 
+          style={styles.navItem}
+          onClick={() => scrollToSection('acara')}
+        >
+          ACARA
+        </span>
+        <span 
+          style={styles.navItem}
+          onClick={() => scrollToSection('lokasi')}
+        >
+          LOKASI
+        </span>
+        <span 
+          style={styles.navItem}
+          onClick={() => scrollToSection('kontak')}
+        >
+          KONTAK
+        </span>
+      </div>
 
       {/* HERO SECTION - HOME */}
       <header id="home" style={styles.hero}>
@@ -853,8 +1203,8 @@ const App = () => {
           <img src={nuansaImage} alt="Nuansa Djoglo" style={styles.highlightImage} />
           <div style={{ padding: '0 15px 20px 15px' }}>
             <div style={styles.highlightIcon}>🏠</div>
-            <h4 style={styles.cardTitle}>Nuansa Djoglo</h4>
-            <p style={styles.cardDescription}>
+            <h4 style={{ color: '#7EACB5', fontSize: '1.2rem', margin: '10px 0' }}>Nuansa Djoglo</h4>
+            <p style={{ color: '#666', fontSize: '0.9rem', lineHeight: '1.5' }}>
               Arsitektur kayu klasik yang nyaman dan sejuk dengan sentuhan modern khas Jawa
             </p>
             <button 
@@ -891,8 +1241,8 @@ const App = () => {
           <img src={kolamImage} alt="Kolam Ikan" style={styles.highlightImage} />
           <div style={{ padding: '0 15px 20px 15px' }}>
             <div style={styles.highlightIcon}>🐟</div>
-            <h4 style={styles.cardTitle}>Aviary Mini</h4>
-            <p style={styles.cardDescription}>
+            <h4 style={{ color: '#7EACB5', fontSize: '1.2rem', margin: '10px 0' }}>Aviary Mini</h4>
+            <p style={{ color: '#666', fontSize: '0.9rem', lineHeight: '1.5' }}>
               Aviary dengan berbagai jenis hewan yang menambah keindahan dan ketenangan
             </p>
             <button 
@@ -929,8 +1279,8 @@ const App = () => {
           <img src={galeriImage} alt="Galeri Antik" style={styles.highlightImage} />
           <div style={{ padding: '0 15px 20px 15px' }}>
             <div style={styles.highlightIcon}>🖼️</div>
-            <h4 style={styles.cardTitle}>Galeri Antik</h4>
-            <p style={styles.cardDescription}>
+            <h4 style={{ color: '#7EACB5', fontSize: '1.2rem', margin: '10px 0' }}>Galeri Antik</h4>
+            <p style={{ color: '#666', fontSize: '0.9rem', lineHeight: '1.5' }}>
               Koleksi barang seni dan antik bernilai sejarah tinggi dari berbagai masa
             </p>
             <button 
@@ -967,8 +1317,8 @@ const App = () => {
           <img src={card4} alt="Daftar Menu" style={styles.highlightImage} />
           <div style={{ padding: '0 15px 20px 15px' }}>
             <div style={styles.highlightIcon}>🍽️</div>
-            <h4 style={styles.cardTitle}>Daftar Menu</h4>
-            <p style={styles.cardDescription}>
+            <h4 style={{ color: '#7EACB5', fontSize: '1.2rem', margin: '10px 0' }}>Daftar Menu</h4>
+            <p style={{ color: '#666', fontSize: '0.9rem', lineHeight: '1.5' }}>
               Pilihan Daftar Menu dan Paket
             </p>
             <button 
@@ -1041,7 +1391,99 @@ const App = () => {
         ))}
       </div>
 
-      {/* LOCATION SECTION - UPDATED MAPS LINK */}
+      {/* ACARA SECTION - NEW */}
+      <section id="acara" style={styles.acaraSection}>
+        <h2 style={styles.sectionTitle}>Acara</h2>
+        <div style={styles.underline}></div>
+        <p style={styles.acaraSubtitle}>Wujudkan momen spesial Anda bersama kami ✨</p>
+        
+        <div style={styles.acaraGrid}>
+          {acaraData.map((acara) => (
+            <div 
+              key={acara.id}
+              style={styles.acaraCard}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-15px)';
+                e.currentTarget.style.boxShadow = '0 30px 50px rgba(0,0,0,0.2)';
+                e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.1)';
+                e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+              }}
+            >
+              <div style={styles.acaraImageContainer}>
+                <img src={acara.image} alt={acara.title} style={styles.acaraImage} />
+                <div style={styles.acaraOverlay}>
+                  <div style={styles.acaraIcon}>{acara.icon}</div>
+                  <h3 style={styles.acaraTitle}>{acara.title}</h3>
+                </div>
+              </div>
+              <div style={styles.acaraContent}>
+                <p style={styles.acaraDescription}>{acara.desc}</p>
+                <button 
+                  style={styles.acaraButton}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = '#BF4646';
+                    e.target.style.transform = 'scale(1.02)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = '#7EACB5';
+                    e.target.style.transform = 'scale(1)';
+                  }}
+                  onClick={() => openWhatsApp(`Halo%20Djoglo%20Banteran%2C%20saya%20tertarik%20dengan%20paket%20${acara.title}`)}
+                >
+                  <span>📞</span> Info Lebih Lanjut
+                </button>
+                <button 
+                  style={styles.acaraViewGalleryBtn}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = '#9f3a3a';
+                    e.target.style.transform = 'scale(1.02)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = '#BF4646';
+                    e.target.style.transform = 'scale(1)';
+                  }}
+                  onClick={() => openGallery('acara', acara.title)}
+                >
+                  <span>📸</span> Lihat Galeri Foto
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Banner Promo Acara */}
+        <div style={styles.acaraBanner}>
+          <div style={styles.acaraBannerText}>
+            <h3 style={styles.acaraBannerTitle}>Rencanakan Acara Anda</h3>
+            <p style={styles.acaraBannerDesc}>
+              Dapatkan penawaran spesial untuk paket acara keluarga, arisan, dan wedding. 
+              Konsultasikan kebutuhan acara Anda dengan tim kami!
+            </p>
+          </div>
+          <button 
+            style={styles.acaraBannerButton}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = '#BF4646';
+              e.target.style.color = 'white';
+              e.target.style.transform = 'scale(1.05)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = 'white';
+              e.target.style.color = '#BF4646';
+              e.target.style.transform = 'scale(1)';
+            }}
+            onClick={() => openWhatsApp('Halo%20Djoglo%20Banteran%2C%20saya%20ingin%20konsultasi%20untuk%20acara')}
+          >
+            Konsultasi Sekarang →
+          </button>
+        </div>
+      </section>
+
+      {/* LOCATION SECTION */}
       <section id="lokasi" style={styles.mapContainer}>
         <div style={styles.mapFlex}>
           <div style={styles.mapText}>
@@ -1070,109 +1512,109 @@ const App = () => {
 
       {/* CONTACT SECTION */}
       <section id="kontak" style={{ padding: '80px 8%', backgroundColor: '#FFF4EA' }}>
-      <h2 style={styles.sectionTitle}>Hubungi Kami</h2>
-      <div style={styles.underline}></div>
-      
-      <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <div style={styles.contactInfo}>
-          {/* WhatsApp Contact - Menggunakan icon dari import */}
-          <div 
-            style={styles.contactItem}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateX(10px)';
-              e.currentTarget.style.border = '2px solid #25D366';
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(37, 211, 102, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateX(0)';
-              e.currentTarget.style.border = '2px solid transparent';
-              e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
-            }}
-            onClick={openWhatsApp}
-          >
-            <div style={styles.contactIcon}>
-              <img src={iconwa} alt="WhatsApp" style={styles.contactImage} />
+        <h2 style={styles.sectionTitle}>Hubungi Kami</h2>
+        <div style={styles.underline}></div>
+        
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={styles.contactInfo}>
+            {/* WhatsApp Contact */}
+            <div 
+              style={styles.contactItem}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateX(10px)';
+                e.currentTarget.style.border = '2px solid #25D366';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(37, 211, 102, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateX(0)';
+                e.currentTarget.style.border = '2px solid transparent';
+                e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+              }}
+              onClick={openWhatsApp}
+            >
+              <div style={styles.contactIcon}>
+                <img src={iconwa} alt="WhatsApp" style={styles.contactImage} />
+              </div>
+              <div>
+                <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>WhatsApp</div>
+                <div style={styles.contactText}>+62 851-6993-4088</div>
+              </div>
             </div>
-            <div>
-              <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>WhatsApp</div>
-              <div style={styles.contactText}>+62 851-6993-4088</div>
-            </div>
-          </div>
 
-          {/* Instagram Contact - Menggunakan icon dari import */}
-          <div 
-            style={styles.contactItem}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateX(10px)';
-              e.currentTarget.style.border = '2px solid #E4405F';
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(228, 64, 95, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateX(0)';
-              e.currentTarget.style.border = '2px solid transparent';
-              e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
-            }}
-            onClick={openInstagram}
-          >
-            <div style={styles.contactIcon}>
-              <img src={iconig} alt="Instagram" style={styles.contactImage} />
+            {/* Instagram Contact */}
+            <div 
+              style={styles.contactItem}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateX(10px)';
+                e.currentTarget.style.border = '2px solid #E4405F';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(228, 64, 95, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateX(0)';
+                e.currentTarget.style.border = '2px solid transparent';
+                e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+              }}
+              onClick={openInstagram}
+            >
+              <div style={styles.contactIcon}>
+                <img src={iconig} alt="Instagram" style={styles.contactImage} />
+              </div>
+              <div>
+                <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>Instagram</div>
+                <div style={styles.contactText}>@djoglobanteran_</div>
+              </div>
             </div>
-            <div>
-              <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>Instagram</div>
-              <div style={styles.contactText}>@djoglobanteran_</div>
-            </div>
-          </div>
 
-          {/* TikTok Contact - Menggunakan icon dari import */}
-          <div 
-            style={styles.contactItem}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateX(10px)';
-              e.currentTarget.style.border = '2px solid #000000';
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateX(0)';
-              e.currentTarget.style.border = '2px solid transparent';
-              e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
-            }}
-            onClick={openTikTok}
-          >
-            <div style={styles.contactIcon}>
-              <img src={icontiktok} alt="TikTok" style={styles.contactImageTik} />
+            {/* TikTok Contact */}
+            <div 
+              style={styles.contactItem}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateX(10px)';
+                e.currentTarget.style.border = '2px solid #000000';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateX(0)';
+                e.currentTarget.style.border = '2px solid transparent';
+                e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+              }}
+              onClick={openTikTok}
+            >
+              <div style={styles.contactIcon}>
+                <img src={icontiktok} alt="TikTok" style={styles.contactImageTik} />
+              </div>
+              <div>
+                <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>TikTok</div>
+                <div style={styles.contactText}>@newdjoglo_banteran</div>
+              </div>
             </div>
-            <div>
-              <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>TikTok</div>
-              <div style={styles.contactText}>@newdjoglo_banteran</div>
-            </div>
-          </div>
 
-          {/* Ponsel Contact - Jika ingin menambahkan kontak telepon */}
-          <div 
-            style={styles.contactItem}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateX(10px)';
-              e.currentTarget.style.border = '2px solid #4A6D7C';
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(74, 109, 124, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateX(0)';
-              e.currentTarget.style.border = '2px solid transparent';
-              e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
-            }}
-            onClick={() => window.location.href = 'tel:+6285169934088'}
-          >
-            <div style={styles.contactIcon}>
-              <img src={iconponsel} alt="Telepon" style={styles.contactImage} />
-            </div>
-            <div>
-              <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>Telepon</div>
-              <div style={styles.contactText}>0851-6993-4088</div>
+            {/* Ponsel Contact */}
+            <div 
+              style={styles.contactItem}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateX(10px)';
+                e.currentTarget.style.border = '2px solid #4A6D7C';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(74, 109, 124, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateX(0)';
+                e.currentTarget.style.border = '2px solid transparent';
+                e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+              }}
+              onClick={() => window.location.href = 'tel:+6285169934088'}
+            >
+              <div style={styles.contactIcon}>
+                <img src={iconponsel} alt="Telepon" style={styles.contactImage} />
+              </div>
+              <div>
+                <div style={{ fontWeight: 'bold', color: '#7EACB5' }}>Telepon</div>
+                <div style={styles.contactText}>0851-6993-4088</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* FOOTER */}
       <footer style={styles.footer}>
@@ -1301,7 +1743,7 @@ const App = () => {
         </div>
       )}
 
-      {/* Tambahkan keyframe animation untuk hero */}
+      {/* Tambahkan keyframe animation untuk hero dan media queries */}
       <style>
         {`
           @keyframes zoom {
@@ -1311,6 +1753,350 @@ const App = () => {
           
           html {
             scroll-behavior: smooth;
+          }
+
+          /* Media Queries untuk Responsive */
+          @media screen and (max-width: 768px) {
+            .desktop-menu {
+              display: none !important;
+            }
+            
+            .mobile-menu-button {
+              display: block !important;
+            }
+
+            [style*="navTitle"] {
+              font-size: 1.1rem !important;
+            }
+
+            [style*="heroH1"] {
+              font-size: 2.5rem !important;
+            }
+
+            [style*="heroPreTitle"] {
+              font-size: 0.9rem !important;
+              letter-spacing: 2px !important;
+            }
+
+            [style*="heroP"] {
+              font-size: 1rem !important;
+            }
+
+            [style*="heroButton"] {
+              padding: 15px 30px !important;
+              font-size: 1rem !important;
+            }
+
+            [style*="highlightSection"] {
+              padding: 40px 4% !important;
+              gap: 20px !important;
+              margin-top: -30px !important;
+              flex-wrap: wrap !important;
+              justify-content: center !important;
+            }
+
+            [style*="highlightCard"] {
+              width: calc(50% - 20px) !important;
+              min-width: 250px !important;
+              margin: 0 !important;
+            }
+
+            [style*="acaraGrid"] {
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+              gap: 20px !important;
+            }
+
+            [style*="acaraBanner"] {
+              padding: 30px !important;
+              flex-direction: column !important;
+              text-align: center !important;
+            }
+
+            [style*="acaraBannerButton"] {
+              width: 100% !important;
+            }
+
+            [style*="sectionTitle"] {
+              font-size: 2rem !important;
+              margin-top: 50px !important;
+            }
+
+            [style*="mapText"] h2 {
+              font-size: 2rem !important;
+            }
+
+            [style*="contactItem"] {
+              padding: 15px 20px !important;
+            }
+
+            [style*="contactText"] {
+              font-size: 0.9rem !important;
+            }
+
+            [style*="modalTitle"] {
+              font-size: 1.5rem !important;
+            }
+
+            [style*="modalHeader"] {
+              padding: 15px 20px !important;
+            }
+
+            [style*="modalBody"] {
+              padding: 20px !important;
+            }
+
+            [style*="galleryGrid"] {
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+              gap: 15px !important;
+            }
+          }
+
+          @media screen and (max-width: 480px) {
+            [style*="navbar"] {
+              padding: 15px 4% !important;
+            }
+
+            [style*="logo"] {
+              height: 40px !important;
+              width: 40px !important;
+            }
+
+            [style*="navTitle"] {
+              font-size: 0.9rem !important;
+            }
+
+            [style*="heroH1"] {
+              font-size: 2rem !important;
+            }
+
+            [style*="highlightSection"] {
+              padding: 30px 4% !important;
+              gap: 15px !important;
+            }
+
+            [style*="highlightCard"] {
+              width: 100% !important;
+              max-width: 350px !important;
+              margin: 0 auto !important;
+            }
+
+            [style*="acaraGrid"] {
+              grid-template-columns: 1fr !important;
+            }
+
+            [style*="acaraImageContainer"] {
+              height: 200px !important;
+            }
+
+            [style*="acaraIcon"] {
+              width: 45px !important;
+              height: 45px !important;
+              font-size: 2rem !important;
+            }
+
+            [style*="acaraTitle"] {
+              font-size: 1.2rem !important;
+            }
+
+            [style*="acaraBannerTitle"] {
+              font-size: 1.5rem !important;
+            }
+
+            [style*="menuGrid"] {
+              padding: 0 4% 50px 4% !important;
+              gap: 25px !important;
+            }
+
+            [style*="cardContent"] {
+              padding: 20px !important;
+            }
+
+            [style*="menuName"] {
+              font-size: 1.1rem !important;
+            }
+
+            [style*="menuPrice"] {
+              font-size: 1.1rem !important;
+            }
+
+            [style*="mapContainer"] {
+              padding: 50px 4% !important;
+            }
+
+            [style*="mapText"] h2 {
+              font-size: 1.8rem !important;
+            }
+
+            [style*="mapText"] p {
+              font-size: 0.95rem !important;
+            }
+
+            [style*="mapFrame"] {
+              height: 300px !important;
+            }
+
+            [style*="contactIcon"] {
+              width: 40px !important;
+              height: 40px !important;
+            }
+
+            [style*="contactImage"] {
+              width: 25px !important;
+              height: 25px !important;
+            }
+
+            [style*="contactImageTik"] {
+              width: 50px !important;
+              height: 50px !important;
+            }
+
+            [style*="footer"] h2 {
+              font-size: 2rem !important;
+            }
+
+            [style*="footer"] p {
+              font-size: 1rem !important;
+            }
+
+            [style*="socialIcon"] {
+              width: 45px !important;
+              height: 45px !important;
+            }
+
+            [style*="socialIconImage"] {
+              width: 25px !important;
+              height: 25px !important;
+            }
+
+            [style*="socialIconImageTik"] {
+              width: 50px !important;
+              height: 50px !important;
+            }
+
+            [style*="waFloat"] {
+              width: 50px !important;
+              height: 50px !important;
+              bottom: 20px !important;
+              right: 20px !important;
+            }
+
+            [style*="waFloatImage"] {
+              width: 28px !important;
+              height: 28px !important;
+            }
+
+            [style*="modalContent"] {
+              width: 98% !important;
+            }
+
+            [style*="galleryGrid"] {
+              grid-template-columns: 1fr !important;
+            }
+
+            [style*="lightboxTitle"] {
+              font-size: 0.9rem !important;
+              bottom: -30px !important;
+            }
+
+            [style*="lightboxClose"] {
+              top: -30px !important;
+              font-size: 1.8rem !important;
+            }
+          }
+
+          /* Landscape mode untuk handphone */
+          @media screen and (max-width: 768px) and (orientation: landscape) {
+            [style*="hero"] {
+              height: 120vh !important;
+            }
+
+            [style*="heroH1"] {
+              font-size: 2.2rem !important;
+            }
+
+            [style*="highlightSection"] {
+              margin-top: -20px !important;
+            }
+
+            [style*="modalBody"] {
+              max-height: calc(90vh - 100px) !important;
+            }
+
+            [style*="galleryGrid"] {
+              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+            }
+
+            [style*="acaraGrid"] {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+          }
+
+          /* Tablet */
+          @media screen and (min-width: 769px) and (max-width: 1024px) {
+            [style*="navbar"] {
+              padding: 20px 5% !important;
+            }
+
+            [style*="heroH1"] {
+              font-size: 4rem !important;
+            }
+
+            [style*="highlightCard"] {
+              width: calc(50% - 15px) !important;
+            }
+
+            [style*="menuGrid"] {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            [style*="acaraGrid"] {
+              grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            [style*="mapFlex"] {
+              gap: 30px !important;
+            }
+          }
+
+          /* Animasi untuk mobile menu */
+          .mobile-menu {
+            animation: slideDown 0.3s ease;
+          }
+
+          @keyframes slideDown {
+            from {
+              opacity: 0;
+              transform: translateY(-20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          /* Touch-friendly improvements untuk mobile */
+          @media (hover: none) and (pointer: coarse) {
+            button, 
+            [style*="cursor: pointer"] {
+              min-height: 44px !important;
+              min-width: 44px !important;
+            }
+
+            [style*="contactItem"] {
+              padding: 15px 20px !important;
+            }
+          }
+
+          /* Mencegah overflow pada container */
+          * {
+            max-width: 100vw;
+            box-sizing: border-box;
+          }
+
+          body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
           }
         `}
       </style>
