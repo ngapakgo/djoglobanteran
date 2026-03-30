@@ -24,9 +24,9 @@ import menu3 from "./assets/paket/Minuman, Jus, Kopi.jpg"
 import menu4 from "./assets/paket/Paket Wedding.jpg"
 import card4 from "./assets/cardnuansa/Card_4.jpg"
 import heroImage from './assets/heroimage/Depan_2.jpg';
-import ayamBakar from './assets/ayam_bakar.jpg';
-import menuGurame from './assets/gurameh_bakar.jpg';
-import menuAyamGeprek from './assets/ayam_geprek.jpg';
+import ayamBakar from './assets/ayam_kampung_bakar.jpg';
+import menuGurame from './assets/gurame_bakar.jpg';
+import menuAyamGeprek from './assets/bebek_goreng.jpg';
 import esTeh from './assets/es_teh.jpg';
 import esJeruk from './assets/es_jeruk.jpg';
 import ingkungAyam from './assets/ingkung_ayam.jpg';
@@ -192,24 +192,24 @@ const App = () => {
 
   const menus = [
     { 
-      nama: "Ayam Bakar", 
+      nama: "Ayam Kampung Bakar", 
       desc: "Ayam pilihan dibakar dengan bumbu rempah khas hingga meresap sempurna, menghasilkan cita rasa manis gurih dengan aroma smokey yang menggoda.", 
-      harga: "Rp 28.000",
+      harga: "Rp 39.000",
       image: ayamBakar,
       popular: true,
       waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Ayam%20Bakar"
     },
     { 
-      nama: "Gurame Bakar", 
+      nama: "Gurame Bakar Djoglo (Besar)", 
       desc: "Ikan gurame segar dibakar dengan olesan bumbu spesial, dagingnya lembut dengan rasa gurih manis yang pas di lidah.", 
-      harga: "Rp 45.000",
+      harga: "Rp 145.000",
       image: menuGurame,
       popular: true,
       waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Gurame%20Bakar"
     },
     { 
-      nama: "Ayam Geprek", 
-      desc: "Ayam goreng crispy yang digeprek dengan sambal pedas mantap, siap bikin lidah bergoyang dan nagih terus.", 
+      nama: "Bebek Goreng", 
+      desc: "Bebek Goreng crispy yang digeprek dengan sambal pedas mantap, siap bikin lidah bergoyang dan nagih terus.", 
       harga: "Rp 15.000",
       image: menuAyamGeprek,
       popular: false,
@@ -218,7 +218,7 @@ const App = () => {
     { 
       nama: "Es Teh", 
       desc: "Teh pilihan disajikan dingin dan segar—teman sempurna untuk menemani setiap hidangan.", 
-      harga: "Rp 8.000",
+      harga: "Rp 4.500",
       image: esTeh,
       popular: false,
       waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Es%20Teh"
@@ -226,7 +226,7 @@ const App = () => {
     { 
       nama: "Es Jeruk", 
       desc: "Perasan jeruk segar dengan rasa manis asam yang menyegarkan, cocok diminum kapan saja.", 
-      harga: "Rp 8.000",
+      harga: "Rp 7.500",
       image: esJeruk,
       popular: false,
       waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Es%20Jeruk"
@@ -234,7 +234,7 @@ const App = () => {
     { 
       nama: "Ingkung Ayam Kampung", 
       desc: "Ayam kampung utuh dimasak dengan bumbu rempah tradisional khas Jawa, menghasilkan rasa autentik, gurih, dan penuh kehangatan.", 
-      harga: "Rp 85.000",
+      harga: "Rp 120.000",
       image: ingkungAyam,
       popular: true,
       waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Ingkung%20Ayam%20Kampung"
