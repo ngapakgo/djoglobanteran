@@ -210,10 +210,18 @@ const App = () => {
     { 
       nama: "Bebek Goreng", 
       desc: "Bebek Goreng crispy yang digeprek dengan sambal pedas mantap, siap bikin lidah bergoyang dan nagih terus.", 
-      harga: "Rp 15.000",
+      harga: "Rp 30.500",
       image: menuAyamGeprek,
       popular: false,
       waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Ayam%20Geprek"
+    },
+    { 
+      nama: "Ingkung Ayam Kampung", 
+      desc: "Ayam kampung utuh dimasak dengan bumbu rempah tradisional khas Jawa, menghasilkan rasa autentik, gurih, dan penuh kehangatan.", 
+      harga: "Rp 120.000",
+      image: ingkungAyam,
+      popular: true,
+      waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Ingkung%20Ayam%20Kampung"
     },
     { 
       nama: "Es Teh", 
@@ -230,14 +238,6 @@ const App = () => {
       image: esJeruk,
       popular: false,
       waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Es%20Jeruk"
-    },
-    { 
-      nama: "Ingkung Ayam Kampung", 
-      desc: "Ayam kampung utuh dimasak dengan bumbu rempah tradisional khas Jawa, menghasilkan rasa autentik, gurih, dan penuh kehangatan.", 
-      harga: "Rp 120.000",
-      image: ingkungAyam,
-      popular: true,
-      waMessage: "Halo%20Djoglo%20Banteran%2C%20saya%20mau%20pesan%20Ingkung%20Ayam%20Kampung"
     },
   ];
 
@@ -1185,12 +1185,16 @@ const App = () => {
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-15px)';
             e.currentTarget.style.boxShadow = '0 30px 50px rgba(0,0,0,0.2)';
-            e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+            if (e.currentTarget.querySelector('img')) {
+              e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+            }
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
             e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-            e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+            if (e.currentTarget.querySelector('img')) {
+              e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+            }
           }}
         >
           <img src={nuansaImage} alt="Nuansa Djoglo" style={styles.highlightImage} />
@@ -1223,12 +1227,16 @@ const App = () => {
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-15px)';
             e.currentTarget.style.boxShadow = '0 30px 50px rgba(0,0,0,0.2)';
-            e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+            if (e.currentTarget.querySelector('img')) {
+              e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+            }
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
             e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-            e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+            if (e.currentTarget.querySelector('img')) {
+              e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+            }
           }}
         >
           <img src={kolamImage} alt="Kolam Ikan" style={styles.highlightImage} />
@@ -1261,12 +1269,16 @@ const App = () => {
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-15px)';
             e.currentTarget.style.boxShadow = '0 30px 50px rgba(0,0,0,0.2)';
-            e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+            if (e.currentTarget.querySelector('img')) {
+              e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+            }
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
             e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-            e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+            if (e.currentTarget.querySelector('img')) {
+              e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+            }
           }}
         >
           <img src={galeriImage} alt="Galeri Antik" style={styles.highlightImage} />
@@ -1299,12 +1311,16 @@ const App = () => {
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-15px)';
             e.currentTarget.style.boxShadow = '0 30px 50px rgba(0,0,0,0.2)';
-            e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+            if (e.currentTarget.querySelector('img')) {
+              e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+            }
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0)';
             e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
-            e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+            if (e.currentTarget.querySelector('img')) {
+              e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+            }
           }}
         >
           <img src={card4} alt="Daftar Menu" style={styles.highlightImage} />
@@ -1398,12 +1414,16 @@ const App = () => {
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-15px)';
                 e.currentTarget.style.boxShadow = '0 30px 50px rgba(0,0,0,0.2)';
-                e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+                if (e.currentTarget.querySelector('img')) {
+                  e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+                }
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.1)';
-                e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+                if (e.currentTarget.querySelector('img')) {
+                  e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+                }
               }}
             >
               <div style={styles.acaraImageContainer}>
@@ -1702,13 +1722,17 @@ const App = () => {
                       e.currentTarget.style.transform = 'translateY(-5px)';
                       e.currentTarget.style.boxShadow = '0 15px 30px rgba(0,0,0,0.2)';
                       e.currentTarget.style.border = '2px solid #BF4646';
-                      e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+                      if (e.currentTarget.querySelector('img')) {
+                        e.currentTarget.querySelector('img').style.transform = 'scale(1.1)';
+                      }
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = 'translateY(0)';
                       e.currentTarget.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
                       e.currentTarget.style.border = '2px solid transparent';
-                      e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+                      if (e.currentTarget.querySelector('img')) {
+                        e.currentTarget.querySelector('img').style.transform = 'scale(1)';
+                      }
                     }}
                     onClick={() => openLightbox(item)}
                   >
@@ -1844,6 +1868,18 @@ const App = () => {
             }
           }
 
+          @media screen and (max-width: 640px) {
+            [style*="highlightCard"] {
+              width: 100% !important;
+              max-width: 100% !important;
+              margin: 0 !important;
+            }
+
+            [style*="highlightSection"] {
+              gap: 15px !important;
+            }
+          }
+
           @media screen and (max-width: 480px) {
             [style*="navbar"] {
               padding: 15px 4% !important;
@@ -1869,7 +1905,7 @@ const App = () => {
 
             [style*="highlightCard"] {
               width: 100% !important;
-              max-width: 350px !important;
+              max-width: 100% !important;
               margin: 0 auto !important;
             }
 
